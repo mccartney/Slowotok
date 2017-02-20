@@ -62,8 +62,8 @@ object Slowotok extends App {
       println("=================== Logging in...")
       val response = client.url("http://slowotok.pl/account/logon")
         .withFollowRedirects(false)
-    	.post(Map("Email" -> Seq(email), // "vi.mot.varlden2@mailinator.com"), 
-    		  "Password" -> Seq(password), // "vi.mot.varlden2@mailinator.com"),
+    	.post(Map("Email" -> Seq(email),
+    		  "Password" -> Seq(password), 
   		  "RememberMe" -> Seq("false")
     		  ))
       val result = Await.result(response, Duration.Inf)
